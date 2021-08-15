@@ -18,7 +18,7 @@
           <tr>
             <td><%= friend.full_name %></td>
             <td><%= friend.email %></td>
-            <td><%= link_to 'View profile', '#', class: "btn btn-xs btn-success" %></td>
+            <td><%= link_to 'View profile', user_path(friend), class: "btn btn-xs btn-success" %></td>
             <% if current_user.not_friend_with?(friend.id) %>
               <td><%= link_to 'Follow Friend', friendships_path(friend: friend), class: "btn btn-xs btn-success", method: :post %></td>
             <% else %>
